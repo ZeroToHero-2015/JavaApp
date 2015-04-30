@@ -2,7 +2,6 @@ package ro.teamnet.zth.appl.domain;
 
 import ro.teamnet.zth.api.annotations.Column;
 import ro.teamnet.zth.api.annotations.Id;
-import ro.teamnet.zth.api.annotations.Join;
 import ro.teamnet.zth.api.annotations.Table;
 import ro.teamnet.zth.api.em.RelationType;
 
@@ -19,8 +18,7 @@ public class Department {
     private String departmentName;
 
     @Column(name = "location_id")
-    @Join(refColName = "location_id", relationType = RelationType.MANYTOONE, tableRef = "locations")
-    private Location locations;
+    private Integer locations;
 
     public Integer getId() {
         return id;
@@ -38,11 +36,11 @@ public class Department {
         this.departmentName = departmentName;
     }
 
-    public Location getLocations() {
+    public Integer getLocations() {
         return locations;
     }
 
-    public void setLocations(Location locations) {
+    public void setLocations(Integer locations) {
         this.locations = locations;
     }
 

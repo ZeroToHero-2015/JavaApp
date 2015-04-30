@@ -8,7 +8,6 @@ public class ColumnInfo {
     private String columnName;
     private Class columnType;
     private String dbName;
-    private JoinColumnInfo joinColumnInfo;
     private boolean isId;
     private Object value;
 
@@ -34,14 +33,6 @@ public class ColumnInfo {
 
     public void setDbName(String dbName) {
         this.dbName = dbName;
-    }
-
-    public JoinColumnInfo getJoinColumnInfo() {
-        return joinColumnInfo;
-    }
-
-    public void setJoinColumnInfo(JoinColumnInfo joinColumnInfo) {
-        this.joinColumnInfo = joinColumnInfo;
     }
 
     public boolean isId() {
