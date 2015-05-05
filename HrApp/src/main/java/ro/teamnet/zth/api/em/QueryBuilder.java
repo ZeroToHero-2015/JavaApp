@@ -1,5 +1,9 @@
 package ro.teamnet.zth.api.em;
 
+import java.sql.*;
+import java.sql.Date;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class QueryBuilder {
@@ -166,6 +170,9 @@ public class QueryBuilder {
         }
         if (value instanceof String){
             return "'" + value + "'";
+        } else if (value instanceof java.sql.Date){
+            DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+            return "STR_TO_DATE('" + dateFormat.format((Date) value) + "', '%m/%d/%Y')";
         } else {
             return value.toString();
         }

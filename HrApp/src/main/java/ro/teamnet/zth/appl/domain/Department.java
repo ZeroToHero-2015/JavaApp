@@ -3,7 +3,6 @@ package ro.teamnet.zth.appl.domain;
 import ro.teamnet.zth.api.annotations.Column;
 import ro.teamnet.zth.api.annotations.Id;
 import ro.teamnet.zth.api.annotations.Table;
-import ro.teamnet.zth.api.em.RelationType;
 
 /**
  * Created by Diana.Diaconu on 4/21/2015.

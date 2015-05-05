@@ -30,7 +30,7 @@ public class LocationDaoTest {
         assertEquals(locationDao.getLocationById(location.getId()), location);
     }
 
-//    @Test
+    @Test
     public void bTestUpdateDepartment() {
         location.setStreetAddress("new postal code");
         location = locationDao.updateLocation(location);
@@ -38,7 +38,7 @@ public class LocationDaoTest {
         assertEquals(locationDao.getLocationById(location.getId()), location);
     }
 
-//    @Test
+    @Test
     public void cTestDeleteLocation() {
         locationDao.deleteLocation(location);
         Location locById = locationDao.getLocationById(location.getId());
